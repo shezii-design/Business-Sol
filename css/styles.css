@@ -9721,7 +9721,7 @@ body.finance-unlocked .finance-eye-btn {
     inset: 0;
     background: rgba(0,0,0,0.55);
     z-index: 1200;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 .mobile-drawer-overlay.active {
     display: block;
