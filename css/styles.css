@@ -362,6 +362,12 @@ body::before {
     position: relative;
 }
 
+.input-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
 .input-icon {
     position: absolute;
     left: 1rem;
@@ -372,6 +378,16 @@ body::before {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    overflow: visible;
+}
+
+.input-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .form-input {
@@ -9721,7 +9737,7 @@ body.finance-unlocked .finance-eye-btn {
     inset: 0;
     background: rgba(0,0,0,0.55);
     z-index: 1200;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
 }
 .mobile-drawer-overlay.active {
     display: block;
@@ -10473,6 +10489,41 @@ body.finance-unlocked .finance-eye-btn {
    ========================================================== */
 
 @media (max-width: 768px) {
+    /* Invoice Template Manager — mobile fix */
+    #invoice-template-manager .modal-container {
+        max-width: 100% !important;
+        max-height: 92vh !important;
+        overflow-y: auto !important;
+    }
+
+    #itm-inner {
+        overflow-x: hidden;
+        padding: 0.75rem;
+    }
+
+    /* Biz info grid — stack on mobile */
+    #itm-inner [style*="grid-template-columns:1fr 1fr 1fr"],
+    #itm-inner [style*="grid-template-columns:2fr 1fr"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Template tab buttons — wrap */
+    #itm-inner [style*="display:flex;gap:0.4rem"] {
+        flex-wrap: wrap;
+    }
+
+    /* Template preview iframe */
+    #itm-frame {
+        height: 320px !important;
+    }
+
+    /* Custom layout canvas — full width */
+    #itm-canvas {
+        width: 100% !important;
+    }
+
     /* Reports page scroll fix */
     #page-reports {
         overflow-x: hidden;
